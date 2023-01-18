@@ -15,6 +15,7 @@ function ItemCard(props) {
       imageURL,
       name,
       price,
+      maxQuantity: quantity,
       qty: 1
     }
     

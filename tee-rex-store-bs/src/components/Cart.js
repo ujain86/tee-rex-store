@@ -13,8 +13,17 @@ function Cart(props) {
 
         cartItemsCopy.filter((i) => {
             if(i.id == item.id){
-                item.qty++;
+                if(item.qty < item.maxQuantity){
+                    item.qty++;
+                    return;
+                }
+                else{
+                    alert('Sorry, no more stock available');
+                    return;
+                }
+                
             }
+            
         });
 
         props.setCartItems(cartItemsCopy);
@@ -26,7 +35,10 @@ function Cart(props) {
 
         cartItemsCopy.filter((i) => {
             if(i.id == item.id){
-                item.qty--;
+                if(item.qty > 1){
+                    item.qty--;
+                }
+                
             }
         });
 
