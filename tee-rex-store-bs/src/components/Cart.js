@@ -3,9 +3,14 @@ import { Card, Col, Row } from 'react-bootstrap';
 
 function Cart(props) {
 
-    // const {cartItems, setCartItems} = props;
-    // console.log('props', setCartItems);
-    console.log("cart: ", props.cartItems)
+    const totalAmount = () => {
+        var sum = 0;
+        props.cartItems.map((item) => {
+            sum += item.price * item.qty ;
+        });
+
+        return sum;
+    }
 
     const handleAdd = (item) => {
 
@@ -60,31 +65,45 @@ function Cart(props) {
     
   return (
     <div>
-        Cart
-        {/* {props.cartItems[0]?(props.cartItems.map((item) => {
-           return <h2> {item.name} </h2>
-        })):""} */}
         <Row>
-            {props.cartItems?(props.cartItems.map((item) => {
-                // const [name, imageURL, price] = item;
-            return (
-                <Col lg={12} >
-                    <Card style={{ width: 400}}>
-                        <Card.Img src={item.imageURL} />
-                        <Card.Body>
-                            <Card.Title>{item.name}</Card.Title>
-                            <Card.Subtitle>Rs. {item.price}</Card.Subtitle>
-                            
-                            Qty: <button onClick={ () => handleSubtract(item)}>-</button>
-                            &nbsp; {item.qty} &nbsp;
-                            <button onClick={() => handleAdd(item)}>+</button>
-                            &nbsp;&nbsp;&nbsp;
-                            <button onClick={() => handleDelete(item)}>Delete</button>
-                        </Card.Body>
-                    </Card>
+
+            {props.cartItems.length > 0 ?
+                <>
+                <Col lg={{offset: 1, span: 10}}>
+                    <h2 className='mb-5 text-success'> Shopping Cart</h2>
                 </Col>
-            )
-            })):""}
+                {props.cartItems.map((item) => {
+                    return (
+                        <Col lg={{offset: 1, span: 10}} >
+                            <div className='cart-div'>
+                                <div className='cart-img'>
+                                    <img src={item.imageURL} height='70' width='70'></img>
+                                </div>
+
+                                <div className='cart-details'>
+                                    <h5>{item.name}</h5>
+                                    <h6>Rs. {item.price}</h6>
+                                    Qty: <button onClick={ () => handleSubtract(item)}>-</button>
+                                        &nbsp; {item.qty} &nbsp;
+                                        <button onClick={() => handleAdd(item)}>+</button>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <button onClick={() => handleDelete(item)}>Delete</button>
+
+                                </div>
+                                
+                            </div>
+                        </Col>
+                    )
+            })}
+                <Col lg={{offset: 1, span: 10}}>
+                <h2 className='mb-5 text-success'> Total: {totalAmount()} </h2>
+                </Col>
+            </>
+            :
+            <Col lg={{offset: 5}}>
+                <h1>Cart is Empty!!</h1>
+            </Col>}
+
         </Row>
     </div>
   )

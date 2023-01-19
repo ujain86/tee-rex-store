@@ -30,3 +30,21 @@ code {
   width: 40px;
   /* margin-right: 30px; */
 }
+
+.cart-div{
+  display: flex;
+  border-bottom: 1px solid gray;
+  height: auto;
+  width: 400px;
+}
+
+.cart-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.cart-details{
+  margin: 10px
+}
