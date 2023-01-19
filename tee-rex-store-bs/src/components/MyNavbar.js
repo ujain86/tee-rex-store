@@ -39,6 +39,7 @@ function MyNavbar(props) {
           <span id='cartCount'> {cartTotal} </span>
         </div>
         
+        
       </Container>
       
     </Navbar>
