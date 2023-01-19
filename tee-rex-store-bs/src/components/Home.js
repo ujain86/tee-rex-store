@@ -40,7 +40,7 @@ function Home() {
                 <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
                 <Container>
                     <Row>
-                        <Col lg={{span: 2}} style={{border: '1px solid black', height: 400}}>
+                        {/* <Col lg={{span: 2}} style={{border: '1px solid black', height: 400}}>
                             <form>
                                 <label>Colour</label> <br/>
                                 <input type='checkbox' checked='true' />Red <br/>
@@ -48,7 +48,7 @@ function Home() {
                                 <input type='checkbox' />Black
                         
                             </form>
-                        </Col>
+                        </Col> */}
                         <Col>
                             <Row>
                                 {APIdata.filter((item) => {
