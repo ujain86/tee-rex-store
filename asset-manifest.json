@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tee-rex-store/static/css/main.ca25eac1.css",
-    "main.js": "/tee-rex-store/static/js/main.2ce1cac6.js",
+    "main.css": "/tee-rex-store/static/css/main.971ed5ff.css",
+    "main.js": "/tee-rex-store/static/js/main.f932567e.js",
     "index.html": "/tee-rex-store/index.html",
-    "main.ca25eac1.css.map": "/tee-rex-store/static/css/main.ca25eac1.css.map",
-    "main.2ce1cac6.js.map": "/tee-rex-store/static/js/main.2ce1cac6.js.map"
+    "main.971ed5ff.css.map": "/tee-rex-store/static/css/main.971ed5ff.css.map",
+    "main.f932567e.js.map": "/tee-rex-store/static/js/main.f932567e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca25eac1.css",
-    "static/js/main.2ce1cac6.js"
+    "static/css/main.971ed5ff.css",
+    "static/js/main.f932567e.js"
   ]
 }
