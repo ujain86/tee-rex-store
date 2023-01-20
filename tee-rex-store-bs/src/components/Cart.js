@@ -83,11 +83,11 @@ function Cart(props) {
                                 <div className='cart-details'>
                                     <h5>{item.name}</h5>
                                     <h6>Rs. {item.price}</h6>
-                                    Qty: <button onClick={ () => handleSubtract(item)}>-</button>
+                                    Qty: <button className='qty-btn' onClick={ () => handleSubtract(item)}>-</button>
                                         &nbsp; {item.qty} &nbsp;
-                                        <button onClick={() => handleAdd(item)}>+</button>
+                                        <button className='qty-btn' onClick={() => handleAdd(item)}>+</button>
                                         &nbsp;&nbsp;&nbsp;
-                                        <button onClick={() => handleDelete(item)}>Delete</button>
+                                        <button className='delete-btn' onClick={() => handleDelete(item)}><img src='https://cdn-icons-png.flaticon.com/512/6861/6861362.png' height={30} width='30' /></button>
 
                                 </div>
                                 
@@ -96,7 +96,7 @@ function Cart(props) {
                     )
             })}
                 <Col lg={{offset: 1, span: 10}}>
-                <h2 className='mb-5 text-success'> Total: {totalAmount()} </h2>
+                <h2 className='mb-5 text-success'> Total: Rs. {totalAmount()} </h2>
                 </Col>
             </>
             :

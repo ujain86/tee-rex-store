@@ -48,3 +48,14 @@ code {
 .cart-details{
   margin: 10px
 }
+
+.qty-btn{
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.delete-btn{
+  background-color: white;
+  border: none;
+}
